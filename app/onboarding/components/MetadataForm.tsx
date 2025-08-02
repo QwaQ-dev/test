@@ -186,10 +186,10 @@ export function MetadataForm({ onComplete }: { onComplete: () => void }) {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="dateOfBirth">Date of Birth</Label>
+                  <Label htmlFor="dateOfBirth">Month and Year of Birth</Label>
                   <Input
                     id="dateOfBirth"
-                    type="date"
+                    type="month"
                     value={formData.dateOfBirth}
                     onChange={(e) => updateFormData("dateOfBirth", e.target.value)}
                     required

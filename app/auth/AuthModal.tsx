@@ -27,7 +27,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalCustomProps) {
   if (isConnected && address) {
     return (
       <Dialog open={isOpen} onOpenChange={(open: boolean) => !open && onClose()}>
-        <DialogContent className="sm:max-w-md bg-white text-gray-800 border border-gray-200 shadow-lg">
+        <DialogContent className="sm:max-w-md bg-white text-gray-800 border border-gray-200 shadow-lg !bg-opacity-100">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-gray-800">Wallet Connected</DialogTitle>
           </DialogHeader>
@@ -56,7 +56,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalCustomProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open: boolean) => !open && onClose()}>
-      <DialogContent className="sm:max-w-md bg-white text-gray-800 border border-gray-200 shadow-lg">
+      <DialogContent className="sm:max-w-md bg-white text-gray-800 border border-gray-200 shadow-lg !bg-opacity-100">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold mb-2 text-gray-800">Connect Wallet</DialogTitle>
         </DialogHeader>
