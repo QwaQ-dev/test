@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Wallet } from "lucide-react"
-import { useAuthModal } from "../../auth/AuthModal"
+import { AuthModal, useAuthModal } from "../../auth/AuthModal"
+
 
 export function WalletConnection() {
   const { isOpen, openModal, closeModal } = useAuthModal()
@@ -28,6 +29,7 @@ export function WalletConnection() {
               <li>• Track your contributions and badges</li>
             </ul>
           </div>
+          <AuthModal isOpen={isOpen} onClose={closeModal} />
           <Button onClick={openModal} className="w-full" size="lg">
             Connect Wallet to Continue
           </Button>
